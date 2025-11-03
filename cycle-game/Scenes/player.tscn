@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3nowd16t3lpp"]
+
+[ext_resource type="Script" uid="uid://bvgennkvdl65p" path="res://Scripts/playerController.gd" id="1_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://ddmoi1go8ybdw" path="res://Assets/knight_sheet.png" id="2_6t5aa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vgqql"]
+size = Vector2(18, 28)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_cvnsp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_vgqql")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_6t5aa")
+region_enabled = true
+region_rect = Rect2(14, 7, 19, 29)
