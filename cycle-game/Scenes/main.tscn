@@ -5,10 +5,10 @@
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jjgbg"]
 distance = -2.0
 
-[node name="Main" type="Node2D"]
+[node name="Platformer" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_jjgbg")]
-position = Vector2(81, 587)
+position = Vector2(107, 481)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(78, 645)
