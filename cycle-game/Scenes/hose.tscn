@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://bsv2eeq28q4on"]
+
+[ext_resource type="Script" uid="uid://8kohs1hente4" path="res://Scripts/waterShoot.gd" id="1_hgiu0"]
+[ext_resource type="Texture2D" uid="uid://b3xf0vsg71eqf" path="res://Assets/hose.png" id="1_ksrva"]
+[ext_resource type="PackedScene" uid="uid://du805mburohm7" path="res://water_projectile.tscn" id="2_hgiu0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aueqs"]
+size = Vector2(86.57383, 27.848114)
+
+[node name="hose" type="StaticBody2D"]
+position = Vector2(500, 500)
+scale = Vector2(-2.52, 3.1323538)
+script = ExtResource("1_hgiu0")
+wave_scene = ExtResource("2_hgiu0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-25.000002, -5.4272327)
+scale = Vector2(0.9900718, 1.0341398)
+shape = SubResource("RectangleShape2D_aueqs")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(1.3303456, 1.2701044)
+texture = ExtResource("1_ksrva")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.021
+autostart = true

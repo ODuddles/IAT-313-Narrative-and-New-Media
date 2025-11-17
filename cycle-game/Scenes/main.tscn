@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://cem4kg14kvww3"]
+[gd_scene load_steps=5 format=3 uid="uid://cem4kg14kvww3"]
 
 [ext_resource type="PackedScene" uid="uid://d3nowd16t3lpp" path="res://Scenes/player.tscn" id="1_jjgbg"]
+[ext_resource type="PackedScene" uid="uid://bsv2eeq28q4on" path="res://Scenes/hose.tscn" id="2_bo1nx"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jjgbg"]
-distance = -2.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jjgbg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bo1nx"]
 
 [node name="Platformer" type="Node2D"]
 
@@ -12,6 +14,34 @@ position = Vector2(107, 481)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(78, 645)
+scale = Vector2(2.1999993, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource("WorldBoundaryShape2D_jjgbg")
+position = Vector2(349, 0)
+scale = Vector2(110.16, 1)
+shape = SubResource("RectangleShape2D_jjgbg")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+offset_left = -755.99994
+offset_top = -10.0
+offset_right = -715.99994
+offset_bottom = 30.0
+scale = Vector2(55.217995, 0.5000114)
+
+[node name="box" type="StaticBody2D" parent="."]
+position = Vector2(1098, 539)
+
+[node name="ColorRect" type="ColorRect" parent="box"]
+offset_left = -45.999996
+offset_top = -98.0
+offset_right = -5.999996
+offset_bottom = -58.0
+scale = Vector2(2.3000045, 4.991615)
+color = Color(0, 0, 0, 1)
+
+[node name="boxCollision" type="CollisionShape2D" parent="box"]
+scale = Vector2(-4.7059035, 9.691626)
+shape = SubResource("RectangleShape2D_bo1nx")
+
+[node name="hose" parent="." instance=ExtResource("2_bo1nx")]
+position = Vector2(3174, 603)
