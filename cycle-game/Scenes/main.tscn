@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cem4kg14kvww3"]
+[gd_scene load_steps=6 format=3 uid="uid://cem4kg14kvww3"]
 
 [ext_resource type="PackedScene" uid="uid://d3nowd16t3lpp" path="res://Scenes/player.tscn" id="1_jjgbg"]
 [ext_resource type="PackedScene" uid="uid://bsv2eeq28q4on" path="res://Scenes/hose.tscn" id="2_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://bgvx0ohqlghcg" path="res://Scenes/bubble_maker.tscn" id="3_8gbba"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jjgbg"]
 
@@ -45,3 +46,6 @@ shape = SubResource("RectangleShape2D_bo1nx")
 
 [node name="hose" parent="." instance=ExtResource("2_bo1nx")]
 position = Vector2(3174, 603)
+
+[node name="bubble_maker" parent="." instance=ExtResource("3_8gbba")]
+position = Vector2(-1751, 655)

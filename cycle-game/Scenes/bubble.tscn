@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=3 uid="uid://dp4pygy6usitx"]
+
+[ext_resource type="Script" uid="uid://c0p1d3cbgjthq" path="res://Scripts/bubble.gd" id="1_fu76k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_amq2t"]
+size = Vector2(16.632217, 42.5)
+
+[sub_resource type="Animation" id="Animation_kry3j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3644, 879)]
+}
+
+[sub_resource type="Animation" id="Animation_jjvhh"]
+resource_name = "move"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -500)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_21xkr"]
+_data = {
+&"RESET": SubResource("Animation_kry3j"),
+&"move": SubResource("Animation_jjvhh")
+}
+
+[node name="bubble" type="CharacterBody2D"]
+position = Vector2(3644, 879)
+script = ExtResource("1_fu76k")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(8.080009, 1)
+color = Color(0, 0, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(161, 20.25)
+scale = Vector2(21.611012, 1.1370717)
+shape = SubResource("RectangleShape2D_amq2t")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_21xkr")
+}
+autoplay = "move"
