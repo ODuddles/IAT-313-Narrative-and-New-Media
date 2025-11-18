@@ -12,7 +12,7 @@ var fill_amount: float = 0.0  # Current fill percentage (0.0 = empty, 1.0 = full
 
 # Handles the protocol when the mouse button is pressed
 func _input(event):
-	if event is InputEventMouseButton and event.pressed:
+	if event is InputEventKey and event.pressed:
 		if fill_amount >= 1.0:
 			timer.stop()
 			fill_amount = 1.0
