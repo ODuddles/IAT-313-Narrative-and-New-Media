@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdfk6os3qrfrc"
-path="res://.godot/imported/dishwashing_frames.png-8df1f4880951d30d1b4c8d3772ba8566.ctex"
+uid="uid://bnto3mt8jybog"
+path="res://.godot/imported/Timeline 1_0005.png-df112ebea1e55f8e544ae02922f535a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/dishwashing_frames.png"
-dest_files=["res://.godot/imported/dishwashing_frames.png-8df1f4880951d30d1b4c8d3772ba8566.ctex"]
+source_file="res://Assets/dishwashing_frames/Timeline 1_0005.png"
+dest_files=["res://.godot/imported/Timeline 1_0005.png-df112ebea1e55f8e544ae02922f535a3.ctex"]
 
 [params]
 
