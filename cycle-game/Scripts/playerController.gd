@@ -10,7 +10,6 @@ var knockback_velocity = Vector2.ZERO
 func _physics_process(delta: float) -> void:
 	if knockback_timer > 0:
 		velocity = knockback_velocity
-		print(velocity)
 		knockback_timer -= delta
 		
 	# Add gravity

@@ -8,7 +8,6 @@
 size = Vector2(86.57383, 27.848114)
 
 [node name="hose" type="StaticBody2D"]
-position = Vector2(500, 500)
 scale = Vector2(-2.52, 3.1323538)
 script = ExtResource("1_hgiu0")
 wave_scene = ExtResource("2_hgiu0")
@@ -24,5 +23,3 @@ scale = Vector2(1.3303456, 1.2701044)
 texture = ExtResource("1_ksrva")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 2.021
-autostart = true

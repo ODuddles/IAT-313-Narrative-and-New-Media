@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bgvx0ohqlghcg"]
 
 [ext_resource type="Script" uid="uid://bk68mobp8eto0" path="res://Scripts/bubble_maker.gd" id="1_erys0"]
-[ext_resource type="PackedScene" uid="uid://dp4pygy6usitx" path="res://Scenes/bubble.tscn" id="2_ssdnd"]
+[ext_resource type="PackedScene" uid="uid://dp4pygy6usitx" path="res://Scenes/Platformer/bubble.tscn" id="2_ssdnd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aueqs"]
 size = Vector2(86.57383, 27.848114)
@@ -17,7 +17,7 @@ scale = Vector2(0.9900718, 1.0341398)
 shape = SubResource("RectangleShape2D_aueqs")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 2.021
+wait_time = 6.178
 autostart = true
 
 [node name="ColorRect" type="ColorRect" parent="."]

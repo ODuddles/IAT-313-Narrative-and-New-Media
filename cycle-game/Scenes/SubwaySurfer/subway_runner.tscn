@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://crivth4x8gbnj"]
+
+[ext_resource type="PackedScene" uid="uid://bd6e3svynhbrx" path="res://Scenes/SubwaySurfer/PlayerSubway.tscn" id="1_3j4fo"]
+[ext_resource type="Script" uid="uid://cu1ofw4seopy7" path="res://Scripts/subway_scene.gd" id="1_e7mgi"]
+[ext_resource type="Texture2D" uid="uid://cma4andpfa3dc" path="res://Assets/chute_bg.png" id="2_dqdao"]
+[ext_resource type="PackedScene" uid="uid://buyr1ik0nc5a2" path="res://Scenes/SubwaySurfer/box.tscn" id="2_hfw51"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3j4fo"]
+size = Vector2(20, 23.307268)
+
+[node name="SubwayRunner" type="Node2D"]
+script = ExtResource("1_e7mgi")
+box = ExtResource("2_hfw51")
+gravity = 300
+freq_time = 1.0
+
+[node name="Player" parent="." instance=ExtResource("1_3j4fo")]
+position = Vector2(510, 670)
+scale = Vector2(5, 5)
+
+[node name="leftWall" type="StaticBody2D" parent="."]
+position = Vector2(31, 260)
+scale = Vector2(-0.6389013, 4.586398)
+
+[node name="boxCollision" type="CollisionShape2D" parent="leftWall"]
+scale = Vector2(-4.7059035, 9.691626)
+shape = SubResource("RectangleShape2D_3j4fo")
+
+[node name="rightWall" type="StaticBody2D" parent="."]
+position = Vector2(1055, 275)
+scale = Vector2(-0.6389013, 4.586398)
+
+[node name="boxCollision" type="CollisionShape2D" parent="rightWall"]
+scale = Vector2(-4.7059035, 9.691626)
+shape = SubResource("RectangleShape2D_3j4fo")
+
+[node name="backWall" type="StaticBody2D" parent="."]
+position = Vector2(558.00006, 800)
+rotation = 1.5707964
+scale = Vector2(-0.6389013, 4.586398)
+
+[node name="boxCollision" type="CollisionShape2D" parent="backWall"]
+position = Vector2(0, -4.36071)
+rotation = -3.1415925
+scale = Vector2(4.7059035, -9.691626)
+shape = SubResource("RectangleShape2D_3j4fo")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+show_behind_parent = true
+offset_right = 1024.0
+offset_bottom = 768.0
+texture = ExtResource("2_dqdao")
+
+[node name="Timer" type="Timer" parent="."]

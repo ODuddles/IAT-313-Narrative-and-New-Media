@@ -8,7 +8,7 @@ extends Node2D
 @export var fill_step: float = 0.04            # Amount filled per click (0.0–1.0)
 
 var difficulty: float = 0.3 #Acts as a spring constant
-var fill_amount: float = 0.0  # Current fill percentage (0.0 = empty, 1.0 = full)
+var fill_amount: float = 0.0  # Current fill percentage 
 
 # Handles the protocol when the mouse button is pressed
 func _input(event):
@@ -42,5 +42,7 @@ func _ready() -> void:
 
 func _on_timeout() -> void:
 	fill_amount -= 0.01
+	var arm = $GrandmaArm
+	arm.set_playback_speed(fill_amount * 10 + 1)
 	queue_redraw()
 	timer.wait_time = max(difficulty * (1 - fill_amount), 0.04)

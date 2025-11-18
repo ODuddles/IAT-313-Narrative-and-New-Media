@@ -1,0 +1,115 @@
+[gd_scene load_steps=6 format=3 uid="uid://cem4kg14kvww3"]
+
+[ext_resource type="PackedScene" uid="uid://d3nowd16t3lpp" path="res://Scenes/player_platform.tscn" id="1_y25ym"]
+[ext_resource type="PackedScene" uid="uid://bsv2eeq28q4on" path="res://Scenes/Platformer/hose.tscn" id="2_midkk"]
+[ext_resource type="PackedScene" uid="uid://bgvx0ohqlghcg" path="res://Scenes/Platformer/bubble_maker.tscn" id="3_44vm7"]
+[ext_resource type="PackedScene" uid="uid://hhq1x8sib3k4" path="res://Scenes/Platformer/platform.tscn" id="4_midkk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bo1nx"]
+
+[node name="Platformer" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_y25ym")]
+position = Vector2(3240, 208.00002)
+
+[node name="box" type="StaticBody2D" parent="."]
+position = Vector2(1098, 539)
+
+[node name="ColorRect" type="ColorRect" parent="box"]
+offset_left = -45.999996
+offset_top = -98.0
+offset_right = -5.999996
+offset_bottom = -58.0
+scale = Vector2(2.3000045, 4.991615)
+color = Color(0, 0, 0, 1)
+
+[node name="boxCollision" type="CollisionShape2D" parent="box"]
+scale = Vector2(-4.7059035, 9.691626)
+shape = SubResource("RectangleShape2D_bo1nx")
+
+[node name="hose" parent="." instance=ExtResource("2_midkk")]
+position = Vector2(3169, 605)
+projectile_speed = 300
+freq_time = 2.0
+initial_time = 0.0
+
+[node name="bubble_maker" parent="." instance=ExtResource("3_44vm7")]
+position = Vector2(3452, 766)
+
+[node name="Platform1" parent="." instance=ExtResource("4_midkk")]
+position = Vector2(-1165, 643)
+scale = Vector2(3.1192806, 1.4384012)
+
+[node name="Platform2" parent="." instance=ExtResource("4_midkk")]
+position = Vector2(4130, -370)
+
+[node name="PlatformTop2" parent="." instance=ExtResource("4_midkk")]
+position = Vector2(6200, -900)
+scale = Vector2(0.07689804, 1.0572027)
+
+[node name="PlatformMid1" parent="." instance=ExtResource("4_midkk")]
+position = Vector2(4700, -600)
+scale = Vector2(0.07689804, 1.0572027)
+
+[node name="PlatformTop1" parent="." instance=ExtResource("4_midkk")]
+position = Vector2(5200, -900)
+scale = Vector2(0.07689804, 1.0572027)
+
+[node name="PlatformBottom1" parent="." instance=ExtResource("4_midkk")]
+position = Vector2(5200, -300)
+scale = Vector2(0.07689804, 1.0572027)
+
+[node name="PlatformBottom3" parent="." instance=ExtResource("4_midkk")]
+position = Vector2(7200, -300)
+scale = Vector2(0.07689804, 1.0572027)
+
+[node name="PlatformBottom2" parent="." instance=ExtResource("4_midkk")]
+position = Vector2(6200, -300)
+scale = Vector2(0.07689804, 1.0572027)
+
+[node name="PlatformMid2" parent="." instance=ExtResource("4_midkk")]
+position = Vector2(5700, -600)
+scale = Vector2(0.07689804, 1.0572027)
+
+[node name="PlatformMid3" parent="." instance=ExtResource("4_midkk")]
+position = Vector2(6700, -597)
+scale = Vector2(0.07689804, 1.0572027)
+
+[node name="hoseMid" parent="." instance=ExtResource("2_midkk")]
+position = Vector2(7900, -649)
+projectile_speed = 300
+initial_time = 1.333
+
+[node name="hoseBottom" parent="." instance=ExtResource("2_midkk")]
+position = Vector2(7900, -346)
+projectile_speed = 300
+initial_time = 0.0
+
+[node name="box2" type="StaticBody2D" parent="."]
+position = Vector2(3148, -864)
+scale = Vector2(1, 2.4399996)
+
+[node name="ColorRect" type="ColorRect" parent="box2"]
+offset_left = -45.999996
+offset_top = -98.0
+offset_right = -5.999996
+offset_bottom = -58.0
+scale = Vector2(2.3000045, 4.991615)
+color = Color(0, 0, 0, 1)
+
+[node name="boxCollision" type="CollisionShape2D" parent="box2"]
+scale = Vector2(-4.7059035, 9.691626)
+shape = SubResource("RectangleShape2D_bo1nx")
+
+[node name="PlatformMid4" parent="." instance=ExtResource("4_midkk")]
+position = Vector2(7700, -597)
+scale = Vector2(0.07689804, 1.0572027)
+
+[node name="PlatformTop3" parent="." instance=ExtResource("4_midkk")]
+position = Vector2(7200, -900)
+scale = Vector2(0.07689804, 1.0572027)
+
+[node name="hoseTop" parent="." instance=ExtResource("2_midkk")]
+position = Vector2(7900, -946)
+projectile_speed = 300
+initial_time = 2.66
