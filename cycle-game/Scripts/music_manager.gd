@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var music_player = $MusicPlayer
-var current_track = "res://Sounds/cloudy.wav"
+var current_track = "res://Sounds/kitchen bgm.mp3"
 var volume_g: float = 0
 var loop_g: bool = false
 var loop_time_g: float = -1

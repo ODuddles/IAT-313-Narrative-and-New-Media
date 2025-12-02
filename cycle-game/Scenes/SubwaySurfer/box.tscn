@@ -14,7 +14,7 @@ script = ExtResource("1_ot5ch")
 shape = SubResource("RectangleShape2D_d58r0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.07, 0.07)
+scale = Vector2(0.028214285, 0.028214285)
 texture = ExtResource("1_yyywi")
 script = ExtResource("2_ot5ch")
 spriteImage1 = ExtResource("1_yyywi")

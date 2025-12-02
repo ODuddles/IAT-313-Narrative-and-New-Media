@@ -84,7 +84,7 @@ size = Vector2(320, 5294)
 [node name="Platformer" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("2_vsgv3")]
-position = Vector2(24557.002, -1698.0001)
+position = Vector2(24892.002, -1412)
 
 [node name="Squishy" type="AnimatedSprite2D" parent="Player"]
 z_index = -1
@@ -94,6 +94,7 @@ sprite_frames = SubResource("SpriteFrames_3mysi")
 animation = &"idle"
 frame = 6
 frame_progress = 1.0
+flip_h = true
 script = ExtResource("3_vsgv3")
 
 [node name="box" type="StaticBody2D" parent="."]

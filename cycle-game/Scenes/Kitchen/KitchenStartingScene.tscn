@@ -36,9 +36,10 @@ size = Vector2(614, 168)
 size = Vector2(248.5715, 475.71442)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_01fn2"]
-size = Vector2(303.33328, 236.66663)
+size = Vector2(214.9999, 204.99994)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xleg3"]
+radius = 6.8333435
 
 [node name="Node2D" type="Node2D"]
 
@@ -110,17 +111,20 @@ position = Vector2(799, 346)
 scale = Vector2(0.3, 0.3)
 
 [node name="Sprite2D" type="Sprite2D" parent="Squishy"]
+position = Vector2(4.5776367e-05, -36.666664)
+scale = Vector2(0.6097392, 0.6097392)
 texture = ExtResource("4_tnu8d")
 region_enabled = true
 region_rect = Rect2(106, 256, 293, 243)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Squishy"]
-position = Vector2(1.666748, -4.999878)
+position = Vector2(-8.392334e-05, -40)
 shape = SubResource("RectangleShape2D_01fn2")
 
 [node name="Actionable" parent="Squishy" instance=ExtResource("3_gqup5")]
+position = Vector2(33.333332, 3.3333333)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Squishy/Actionable"]
-position = Vector2(-6.666664, 3.3333333)
+position = Vector2(-36.66667, -43.333344)
 scale = Vector2(20, 20)
 shape = SubResource("CircleShape2D_xleg3")

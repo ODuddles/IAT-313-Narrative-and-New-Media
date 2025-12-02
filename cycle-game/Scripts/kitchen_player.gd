@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @onready var actionable = $Actionable
-const SPEED = 100
+const SPEED = 180
 var triggered: bool = false
 
 func _ready() -> void:

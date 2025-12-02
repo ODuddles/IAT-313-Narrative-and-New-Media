@@ -40,7 +40,7 @@ enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Dialogue/Conversation1.dialogue", "res://Dialogue/decision_convo.dialogue", "res://Dialogue/truck_convo.dialogue", "res://Dialogue/discussion.dialogue", "res://Dialogue/door_snidge.dialogue", "res://Dialogue/nightstand.dialogue", "res://Dialogue/untitled.dialogue", "res://Dialogue/GrandmaEli.dialogue", "res://Dialogue/squishyGone.dialogue", "res://Dialogue/afterPlatform1.dialogue", "res://Dialogue/afterPlatform2.dialogue", "res://Dialogue/afterPlatform3.dialogue", "res://Dialogue/afterPlatform4.dialogue", "res://Dialogue/afterPlatform5.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Dialogue/Conversation1.dialogue", "res://Dialogue/decision_convo.dialogue", "res://Dialogue/truck_convo.dialogue", "res://Dialogue/discussion.dialogue", "res://Dialogue/door_snidge.dialogue", "res://Dialogue/nightstand.dialogue", "res://Dialogue/untitled.dialogue", "res://Dialogue/GrandmaEli.dialogue", "res://Dialogue/squishyGone.dialogue", "res://Dialogue/afterPlatform1.dialogue", "res://Dialogue/afterPlatform3.dialogue", "res://Dialogue/afterPlatform4.dialogue", "res://Dialogue/afterPlatform5.dialogue", "res://Dialogue/afterPlatform2.dialogue")
 
 [layer_names]
 

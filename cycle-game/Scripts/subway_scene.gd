@@ -13,7 +13,7 @@ var freq_time_initial: float
 
 func spawn_box():
 	var box: Area2D = box.instantiate()
-	box.scale = Vector2(5, 5)
+	box.scale = Vector2(3, 3)
 	box.position = starting_positions.pick_random()
 	box.set_speed(gravity)
 	get_parent().add_child(box)  

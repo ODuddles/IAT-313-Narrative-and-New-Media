@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://bd6e3svynhbrx"]
 
 [ext_resource type="Script" uid="uid://c5q6dff30nc0q" path="res://Scripts/playerSubControls.gd" id="1_rs1r0"]
-[ext_resource type="Texture2D" uid="uid://cwalqrbvqx3u6" path="res://Assets/SubwaySurfer/squishy_chute_spritesheet.png" id="2_rs1r0"]
+[ext_resource type="Texture2D" uid="uid://cg5dc6udx5la7" path="res://Assets/SubwaySurfer/helmet_chute.png" id="2_rs1r0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rs1r0"]
 size = Vector2(14.601478, 12.565467)
@@ -64,7 +64,8 @@ position = Vector2(-0.17806697, 1.1539714)
 shape = SubResource("RectangleShape2D_rs1r0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.1, 0.1)
+position = Vector2(9.536743e-07, -9.536743e-07)
+scale = Vector2(0.06600001, 0.06600001)
 sprite_frames = SubResource("SpriteFrames_3i5t8")
 animation = &"idle"
 frame_progress = 0.70281816
