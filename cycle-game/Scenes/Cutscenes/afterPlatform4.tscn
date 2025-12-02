@@ -1,14 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://rbkd22moahbs"]
+[gd_scene load_steps=4 format=3 uid="uid://rbkd22moahbs"]
 
 [ext_resource type="Script" uid="uid://c035xmyxtyt7h" path="res://Scripts/stillImage_dialogue.gd" id="1_4w3be"]
 [ext_resource type="Resource" uid="uid://bwi801t7carng" path="res://Dialogue/afterPlatform4.dialogue" id="2_pcltg"]
+[ext_resource type="Texture2D" uid="uid://mgtono0oxtab" path="res://Assets/Cutscenes/blackout.png" id="3_1udt3"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_4w3be")
 dialogue = ExtResource("2_pcltg")
 next_scene = "res://Scenes/Cutscenes/afterPlatform5.tscn"
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(509.49997, 384)
+scale = Vector2(1.0048828, 1.0234375)
+texture = ExtResource("3_1udt3")
+
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(25.639997, 19.88)

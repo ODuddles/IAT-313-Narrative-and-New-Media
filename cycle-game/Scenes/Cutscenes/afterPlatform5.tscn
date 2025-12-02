@@ -1,14 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://bgc2bf23oxb5y"]
+[gd_scene load_steps=4 format=3 uid="uid://bgc2bf23oxb5y"]
 
 [ext_resource type="Script" uid="uid://c035xmyxtyt7h" path="res://Scripts/stillImage_dialogue.gd" id="1_dbgyd"]
 [ext_resource type="Resource" uid="uid://cxa1eorapmhot" path="res://Dialogue/afterPlatform5.dialogue" id="2_7otji"]
+[ext_resource type="Texture2D" uid="uid://rs7qionsspa6" path="res://Assets/Cutscenes/helmet_intro.png" id="3_n6wx3"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_dbgyd")
 dialogue = ExtResource("2_7otji")
 next_scene = "res://Scenes/SubwaySurfer/subway_runner.tscn"
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(512, 384)
+scale = Vector2(4, 4)
+texture = ExtResource("3_n6wx3")
+
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(25.639997, 19.88)

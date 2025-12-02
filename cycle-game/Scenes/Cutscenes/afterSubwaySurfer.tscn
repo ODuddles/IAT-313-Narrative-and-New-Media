@@ -1,17 +1,17 @@
-[gd_scene format=3 uid="uid://dc846mfyfcf6b"]
+[gd_scene load_steps=2 format=3 uid="uid://dc846mfyfcf6b"]
+
+[ext_resource type="Texture2D" uid="uid://car1j7e8cgtdn" path="res://Assets/Cutscenes/helmet_after_chute.png" id="1_1c35d"]
 
 [node name="Node2D" type="Node2D"]
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(512, 384.00003)
+scale = Vector2(4, 4.0000005)
+texture = ExtResource("1_1c35d")
+
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(25.858583, 19.73112)
 color = Color(0, 0, 0, 1)
-
-[node name="Label" type="Label" parent="."]
-offset_left = 241.99998
-offset_top = 254.0
-offset_right = 400.0
-offset_bottom = 303.0
-scale = Vector2(3.2767887, 9)
-text = "ENDING Placeholder"

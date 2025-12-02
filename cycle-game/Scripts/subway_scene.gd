@@ -3,7 +3,7 @@ extends Node2D
 @export var box: PackedScene  
 @export var gravity = 200
 @export var freq_time: float = 4
-@export var game_time: float = 60
+@export var game_time: float = 30
 @onready var timer: Timer = $Timer
 @onready var survive_timer: Timer = $Survive_timer
 
