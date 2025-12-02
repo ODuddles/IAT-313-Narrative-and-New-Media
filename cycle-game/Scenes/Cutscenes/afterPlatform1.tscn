@@ -1,13 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://bi1vnlfb354p4"]
+[gd_scene load_steps=3 format=3 uid="uid://bi1vnlfb354p4"]
 
-[ext_resource type="Script" uid="uid://c035xmyxtyt7h" path="res://Scripts/stillImage_dialogue.gd" id="1_2bms7"]
-[ext_resource type="Resource" uid="uid://b71bsel8yspyx" path="res://Dialogue/afterPlatform1.dialogue" id="2_oufuk"]
+[ext_resource type="Script" uid="uid://b2wllokbwhqlv" path="res://Scripts/after_song_scene_switch.gd" id="1_oufuk"]
 [ext_resource type="Texture2D" uid="uid://mgtono0oxtab" path="res://Assets/Cutscenes/blackout.png" id="3_q7eae"]
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_2bms7")
-dialogue = ExtResource("2_oufuk")
+script = ExtResource("1_oufuk")
+song = "res://Sounds/conveyor_cutscenes.wav"
 next_scene = "res://Scenes/Cutscenes/afterPlatform2.tscn"
+time = 4.0
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false

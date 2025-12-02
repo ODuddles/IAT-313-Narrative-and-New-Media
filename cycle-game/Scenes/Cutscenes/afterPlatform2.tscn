@@ -1,12 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://lvmmsxv7rjui"]
+[gd_scene load_steps=3 format=3 uid="uid://lvmmsxv7rjui"]
 
-[ext_resource type="Script" uid="uid://c035xmyxtyt7h" path="res://Scripts/stillImage_dialogue.gd" id="1_vl65q"]
-[ext_resource type="Resource" uid="uid://c03q82hleihva" path="res://Dialogue/afterPlatform2.dialogue" id="2_lvgwb"]
+[ext_resource type="Script" uid="uid://pubjqmha3c2f" path="res://Scenes/Cutscenes/timer_next_scene.gd" id="1_lvgwb"]
 [ext_resource type="Texture2D" uid="uid://dvhbmyrr8pxnu" path="res://Assets/Cutscenes/high_tier.png" id="3_x2lwg"]
 
 [node name="Node2D2" type="Node2D"]
-script = ExtResource("1_vl65q")
-dialogue = ExtResource("2_lvgwb")
+script = ExtResource("1_lvgwb")
+time = 4.0
 next_scene = "res://Scenes/Cutscenes/afterPlatform3.tscn"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

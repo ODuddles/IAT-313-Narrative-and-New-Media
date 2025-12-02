@@ -31,6 +31,9 @@ func play_music(stream_path, volume: float, loop: bool = false, loop_time: float
 func set_volume(volume: float):
 	music_player.volume_db = volume
 
+func wait_music() -> void:
+	await music_player.finished
+
 func stop_music():
 	loop_timer.stop()
 	music_player.stop()

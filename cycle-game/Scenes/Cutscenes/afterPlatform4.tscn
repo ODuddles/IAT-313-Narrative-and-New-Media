@@ -1,13 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://rbkd22moahbs"]
+[gd_scene load_steps=3 format=3 uid="uid://rbkd22moahbs"]
 
-[ext_resource type="Script" uid="uid://c035xmyxtyt7h" path="res://Scripts/stillImage_dialogue.gd" id="1_4w3be"]
-[ext_resource type="Resource" uid="uid://bwi801t7carng" path="res://Dialogue/afterPlatform4.dialogue" id="2_pcltg"]
+[ext_resource type="Script" uid="uid://b2wllokbwhqlv" path="res://Scripts/after_song_scene_switch.gd" id="1_pcltg"]
 [ext_resource type="Texture2D" uid="uid://mgtono0oxtab" path="res://Assets/Cutscenes/blackout.png" id="3_1udt3"]
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_4w3be")
-dialogue = ExtResource("2_pcltg")
+script = ExtResource("1_pcltg")
+song = "res://Sounds/turn_into_helmet.wav"
 next_scene = "res://Scenes/Cutscenes/afterPlatform5.tscn"
+time = 4.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(509.49997, 384)

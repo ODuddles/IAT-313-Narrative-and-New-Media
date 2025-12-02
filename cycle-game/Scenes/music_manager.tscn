@@ -7,5 +7,6 @@ script = ExtResource("1_hsxb6")
 loop_timer = NodePath("Timer")
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+autoplay = true
 
 [node name="Timer" type="Timer" parent="."]

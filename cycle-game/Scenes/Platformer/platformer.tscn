@@ -84,7 +84,7 @@ size = Vector2(320, 5294)
 [node name="Platformer" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("2_vsgv3")]
-position = Vector2(24892.002, -1412)
+position = Vector2(204.00024, -1087)
 
 [node name="Squishy" type="AnimatedSprite2D" parent="Player"]
 z_index = -1
