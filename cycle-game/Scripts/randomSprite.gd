@@ -2,7 +2,6 @@ extends Sprite2D
 @export var spriteImage1: Texture
 @export var spriteImage2: Texture
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var textures : Array[Texture2D] = [
 	spriteImage1,

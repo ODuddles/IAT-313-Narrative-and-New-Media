@@ -7,7 +7,7 @@
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_qahb8")
 dialogue = ExtResource("2_jjvp5")
-next_scene = "res://Scenes/Platformer/platformer.tscn"
+next_scene = "res://Scenes/Cutscenes/truckYard.tscn"
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3

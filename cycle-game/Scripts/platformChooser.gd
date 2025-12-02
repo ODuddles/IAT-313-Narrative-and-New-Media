@@ -2,7 +2,6 @@ extends StaticBody2D
 
 @export var platform_type: String = "Long"
 
-# If -1 or 0 then a random of given type will be chosen
 @export var platform_nr: int = -1
 @onready var long_arr: Array[Sprite2D] = [$Long/Opt1, $Long/Opt2]
 @onready var short_arr: Array[Sprite2D] = [$Short/Opt3, $Short/Opt4, $Short/Opt5]

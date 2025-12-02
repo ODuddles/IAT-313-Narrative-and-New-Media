@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://d20eitoo6emtq"
+path="res://.godot/imported/GrandmaEli.dialogue-5fc36cbe33aeaa490fd692532bad1c76.tres"
+
+[deps]
+
+source_file="res://Dialogue/GrandmaEli.dialogue"
+dest_files=["res://.godot/imported/GrandmaEli.dialogue-5fc36cbe33aeaa490fd692532bad1c76.tres"]
+
+[params]
+
+defaults=true

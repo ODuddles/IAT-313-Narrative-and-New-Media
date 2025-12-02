@@ -17,14 +17,14 @@ offset_bottom = 40.0
 texture = ExtResource("1_fjngr")
 
 [node name="Boxy" type="Sprite2D" parent="."]
-position = Vector2(399.00003, 570)
+position = Vector2(640.6, 570.45)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_jaget")
 region_enabled = true
 region_rect = Rect2(1024, 294, 444, 206)
 
 [node name="Squishy" type="Sprite2D" parent="."]
-position = Vector2(558, 564)
+position = Vector2(799.6, 564.45)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("3_7j5eb")
 region_enabled = true

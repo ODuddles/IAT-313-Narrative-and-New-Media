@@ -32,7 +32,4 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _on_dialogue_finished(dialogue_resource):
-	get_tree().change_scene_to_file("res://Scenes/Clicker/clicker.tscn")
-	#triggered = false
-	#var tween = get_tree().create_tween()
-	#tween.tween_property(self, "position:y", self.position.y + 200, 0.5)
+	get_tree().change_scene_to_file("res://Scenes/Cutscenes/grandmaWashing.tscn")

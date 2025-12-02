@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgc2bf23oxb5y"]
+
+[ext_resource type="Script" uid="uid://c035xmyxtyt7h" path="res://Scripts/stillImage_dialogue.gd" id="1_dbgyd"]
+[ext_resource type="Resource" uid="uid://cxa1eorapmhot" path="res://Dialogue/afterPlatform5.dialogue" id="2_7otji"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_dbgyd")
+dialogue = ExtResource("2_7otji")
+next_scene = "res://Scenes/SubwaySurfer/subway_runner.tscn"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(25.639997, 19.88)
+color = Color(1, 1, 0, 1)

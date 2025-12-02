@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bqsfg0w4dvrsp"]
+
+[ext_resource type="Texture2D" uid="uid://djc6baxqlo7wf" path="res://Assets/Kitchen/grandma_static.png" id="1_04gs2"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_04gs2")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(155, 6, 213, 213)

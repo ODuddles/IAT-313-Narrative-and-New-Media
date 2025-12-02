@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://byvwl0bh5qw20"
+path="res://.godot/imported/afterPlatform3.dialogue-da192fa6d2726e9b495b64f84f0b225a.tres"
+
+[deps]
+
+source_file="res://Dialogue/afterPlatform3.dialogue"
+dest_files=["res://.godot/imported/afterPlatform3.dialogue-da192fa6d2726e9b495b64f84f0b225a.tres"]
+
+[params]
+
+defaults=true

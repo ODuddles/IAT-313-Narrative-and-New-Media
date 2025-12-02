@@ -17,8 +17,7 @@ func set_speed(new_speed: float):
 	speed = new_speed
 
 func _on_body_entered(body):
-	# Check if the body is your main character
 	if body.name == "Player":
-		body.take_damage_water(direction)  # call your player's damage function
-	queue_free()        # remove the bullet
+		body.take_damage_water(direction)  
+	queue_free()      
 	

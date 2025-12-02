@@ -2,7 +2,10 @@
 
 [ext_resource type="Script" uid="uid://bs01mfwdgyoni" path="res://Scripts/music_manager.gd" id="1_hsxb6"]
 
-[node name="MusicManager" type="Node2D"]
+[node name="MusicManager" type="Node2D" node_paths=PackedStringArray("loop_timer")]
 script = ExtResource("1_hsxb6")
+loop_timer = NodePath("Timer")
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="Timer" type="Timer" parent="."]

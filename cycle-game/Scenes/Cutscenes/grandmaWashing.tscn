@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://ooe8a18bxd5"]
+
+[ext_resource type="Script" uid="uid://pubjqmha3c2f" path="res://Scenes/Cutscenes/timer_next_scene.gd" id="1_a36fp"]
+[ext_resource type="Texture2D" uid="uid://578s0a5j2ydb" path="res://Assets/Cutscenes/grandmaWashing.png" id="1_s0sb1"]
+[ext_resource type="Texture2D" uid="uid://b6s7ynq42tn40" path="res://Assets/Kitchen/boxy_stumble.png" id="2_3l5mi"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_a36fp")
+time = 4.0
+next_scene = "res://Scenes/Clicker/clicker.tscn"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_s0sb1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(693, 604)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_3l5mi")
+region_enabled = true
+region_rect = Rect2(1024, 294, 444, 206)

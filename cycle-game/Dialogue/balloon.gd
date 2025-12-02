@@ -2,6 +2,7 @@ extends CanvasLayer
 ## A basic dialogue balloon for use with Dialogue Manager.
 @export var boxy_sprite: PackedScene
 @export var squishy_sprite: PackedScene
+@export var grandma_sprite: PackedScene
 
 ## The dialogue resource
 @export var dialogue_resource: DialogueResource
@@ -128,6 +129,9 @@ func handle_portrait(character_name: String) -> void:
 	elif character_name == "Squishy":
 		var squishy_sprite_instance = squishy_sprite.instantiate()
 		portrait.add_child(squishy_sprite_instance)
+	elif character_name == "Grandma":
+		var grandma_sprite_instance = grandma_sprite.instantiate()
+		portrait.add_child(grandma_sprite_instance)
 		
 
 ## Apply any changes to the balloon given a new [DialogueLine].

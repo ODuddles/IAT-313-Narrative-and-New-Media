@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Cycle Game"
-run/main_scene="uid://cem4kg14kvww3"
+run/main_scene="uid://bk2x3yqx2pe1r"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -40,7 +40,7 @@ enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Dialogue/Conversation1.dialogue", "res://Dialogue/decision_convo.dialogue", "res://Dialogue/truck_convo.dialogue", "res://Dialogue/discussion.dialogue", "res://Dialogue/door_snidge.dialogue", "res://Dialogue/nightstand.dialogue", "res://Dialogue/untitled.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Dialogue/Conversation1.dialogue", "res://Dialogue/decision_convo.dialogue", "res://Dialogue/truck_convo.dialogue", "res://Dialogue/discussion.dialogue", "res://Dialogue/door_snidge.dialogue", "res://Dialogue/nightstand.dialogue", "res://Dialogue/untitled.dialogue", "res://Dialogue/GrandmaEli.dialogue", "res://Dialogue/squishyGone.dialogue", "res://Dialogue/afterPlatform1.dialogue", "res://Dialogue/afterPlatform2.dialogue", "res://Dialogue/afterPlatform3.dialogue", "res://Dialogue/afterPlatform4.dialogue", "res://Dialogue/afterPlatform5.dialogue")
 
 [layer_names]
 

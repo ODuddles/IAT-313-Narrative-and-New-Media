@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dc846mfyfcf6b"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(25.858583, 19.73112)
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 241.99998
+offset_top = 254.0
+offset_right = 400.0
+offset_bottom = 303.0
+scale = Vector2(3.2767887, 9)
+text = "ENDING Placeholder"

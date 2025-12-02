@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://cem4kg14kvww3"]
+[gd_scene load_steps=30 format=3 uid="uid://cem4kg14kvww3"]
 
 [ext_resource type="Texture2D" uid="uid://b3yfy1657ty04" path="res://Assets/Kitchen/squishy_idle_spritesheet .png" id="2_e83a5"]
 [ext_resource type="PackedScene" uid="uid://d3nowd16t3lpp" path="res://Scenes/player_platform.tscn" id="2_vsgv3"]
@@ -16,6 +16,9 @@
 [ext_resource type="Texture2D" uid="uid://bvoojkvyh4olc" path="res://Assets/Platformer/factory_general.png" id="13_raxmc"]
 [ext_resource type="Texture2D" uid="uid://cdvb5nqt5o107" path="res://Assets/Platformer/water_tile.png" id="14_ng2tp"]
 [ext_resource type="Texture2D" uid="uid://bu5th5k4eqbtj" path="res://Assets/Platformer/fire_tile.png" id="15_edc1j"]
+[ext_resource type="Script" uid="uid://cyncbgmmgikai" path="res://Scripts/boxyStolen.gd" id="17_e34yu"]
+[ext_resource type="Resource" uid="uid://c6m3vr6qhmmo7" path="res://Dialogue/squishyGone.dialogue" id="18_nimt3"]
+[ext_resource type="Script" uid="uid://c1cjnwryve75g" path="res://Scenes/Platformer/platformEnd.gd" id="19_h4bj0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vsgv3"]
 atlas = ExtResource("2_e83a5")
@@ -75,10 +78,13 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_loif0"]
 size = Vector2(2237.7285, 20)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nimt3"]
+size = Vector2(320, 5294)
+
 [node name="Platformer" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("2_vsgv3")]
-position = Vector2(508.00003, -1731)
+position = Vector2(24557.002, -1698.0001)
 
 [node name="Squishy" type="AnimatedSprite2D" parent="Player"]
 z_index = -1
@@ -392,3 +398,31 @@ offset_right = 26339.0
 offset_bottom = 2463.0
 texture = ExtResource("15_edc1j")
 stretch_mode = 1
+
+[node name="SquishyGone" type="Area2D" parent="Backgrounds" node_paths=PackedStringArray("squishy")]
+position = Vector2(12764, -893)
+script = ExtResource("17_e34yu")
+squishy = NodePath("../../Player/Squishy")
+dialogue = ExtResource("18_nimt3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgrounds/SquishyGone"]
+position = Vector2(150, 773)
+shape = SubResource("RectangleShape2D_nimt3")
+
+[node name="ColorRect" type="ColorRect" parent="Backgrounds/SquishyGone"]
+visible = false
+z_index = 10
+offset_left = -16215.0
+offset_top = -2041.0
+offset_right = -16175.0
+offset_bottom = -2001.0
+scale = Vector2(798.4751, 150)
+color = Color(0, 0, 0, 1)
+
+[node name="Ending" type="Area2D" parent="."]
+position = Vector2(25263, -893)
+script = ExtResource("19_h4bj0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ending"]
+position = Vector2(150, 773)
+shape = SubResource("RectangleShape2D_nimt3")

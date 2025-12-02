@@ -6,5 +6,4 @@ func _ready():
 	start.pressed.connect(_on_start_button_pressed)
 
 func _on_start_button_pressed():
-	print( "hello")
 	get_tree().change_scene_to_file("res://Scenes/Cutscenes/openingImage.tscn")   

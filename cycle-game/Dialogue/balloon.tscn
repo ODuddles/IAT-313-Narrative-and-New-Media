@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c7c0ouxylv2ls"]
+[gd_scene load_steps=16 format=3 uid="uid://c7c0ouxylv2ls"]
 
 [ext_resource type="Script" uid="uid://etc6ghmhojsn" path="res://Dialogue/balloon.gd" id="1_36de5"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://y3iugsrrosq4" path="res://Scenes/Dialogue/boxy_portrait.tscn" id="2_tfsfl"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_72ixx"]
 [ext_resource type="PackedScene" uid="uid://dwdl8p3kpcy2m" path="res://Scenes/Dialogue/squishy_portrait.tscn" id="3_qxthb"]
+[ext_resource type="PackedScene" uid="uid://bqsfg0w4dvrsp" path="res://Scenes/Dialogue/grandma_portrait.tscn" id="4_qxthb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -107,6 +108,7 @@ layer = 100
 script = ExtResource("1_36de5")
 boxy_sprite = ExtResource("2_tfsfl")
 squishy_sprite = ExtResource("3_qxthb")
+grandma_sprite = ExtResource("4_qxthb")
 
 [node name="Balloon" type="Control" parent="."]
 unique_name_in_owner = true

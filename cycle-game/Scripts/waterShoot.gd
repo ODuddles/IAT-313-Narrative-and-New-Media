@@ -23,7 +23,7 @@ func fire_wave(direction: Vector2):
 		var finished_anim = await $AnimationPlayer.animation_finished
 		if finished_anim == anim_name:
 			break
-	get_parent().add_child(wave)  # add the object to the scene
+	get_parent().add_child(wave) 
 
 func _ready() -> void:
 	await get_tree().create_timer(initial_time).timeout

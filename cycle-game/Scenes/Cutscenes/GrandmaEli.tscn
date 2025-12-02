@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0whi6stseff4"]
+
+[ext_resource type="Texture2D" uid="uid://c1prifwa7i4bm" path="res://Assets/Cutscenes/grandmaEli.png" id="1_1635r"]
+[ext_resource type="Script" uid="uid://c035xmyxtyt7h" path="res://Scripts/stillImage_dialogue.gd" id="1_q8kr4"]
+[ext_resource type="Resource" uid="uid://d20eitoo6emtq" path="res://Dialogue/GrandmaEli.dialogue" id="2_6jwlk"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_q8kr4")
+dialogue = ExtResource("2_6jwlk")
+next_scene = "res://Scenes/Kitchen/KitchenStartingScene.tscn"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_top = -30.0
+offset_right = 1600.0
+offset_bottom = 1225.0
+scale = Vector2(0.64, 0.64)
+texture = ExtResource("1_1635r")

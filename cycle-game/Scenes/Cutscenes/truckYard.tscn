@@ -4,6 +4,21 @@
 [ext_resource type="Texture2D" uid="uid://lf4cfmab3gwx" path="res://Assets/Cutscenes/front yard.png" id="1_pk2oi"]
 [ext_resource type="Texture2D" uid="uid://wgw6wkswssh6" path="res://Assets/Cutscenes/truck.png" id="2_bxb2h"]
 
+[sub_resource type="Animation" id="Animation_7qlhh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1077, -225)]
+}
+
 [sub_resource type="Animation" id="Animation_n1u3q"]
 resource_name = "truckMove"
 length = 2.5
@@ -18,21 +33,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(1077, -225), Vector2(712, 505), Vector2(712, 505), Vector2(534, 992)]
-}
-
-[sub_resource type="Animation" id="Animation_7qlhh"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1077, -225)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ajoph"]

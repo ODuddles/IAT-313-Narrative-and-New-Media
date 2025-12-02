@@ -12,7 +12,7 @@ size = Vector2(20, 23.307268)
 script = ExtResource("1_e7mgi")
 box = ExtResource("2_hfw51")
 gravity = 300
-freq_time = 1.0
+freq_time = 1.5
 
 [node name="Player" parent="." instance=ExtResource("1_3j4fo")]
 position = Vector2(510, 670)
@@ -52,3 +52,5 @@ offset_bottom = 768.0
 texture = ExtResource("2_dqdao")
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="Survive_timer" type="Timer" parent="."]

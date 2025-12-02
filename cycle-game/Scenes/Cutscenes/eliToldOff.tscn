@@ -6,6 +6,7 @@
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_2vne4")
 time = 4.0
+next_scene = "res://Scenes/Cutscenes/GrandmaEli.tscn"
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 40.0

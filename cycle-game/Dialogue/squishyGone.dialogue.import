@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c6m3vr6qhmmo7"
+path="res://.godot/imported/squishyGone.dialogue-46288e8c4d28fcd70d8b394a180b498d.tres"
+
+[deps]
+
+source_file="res://Dialogue/squishyGone.dialogue"
+dest_files=["res://.godot/imported/squishyGone.dialogue-46288e8c4d28fcd70d8b394a180b498d.tres"]
+
+[params]
+
+defaults=true

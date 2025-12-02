@@ -34,4 +34,4 @@ func _physics_process(delta: float) -> void:
 		goal = Vector2(640, 670)
 		
 	if prev_place != place:
-		move_to(goal, 0.5)
+		move_to(goal, 0.2)

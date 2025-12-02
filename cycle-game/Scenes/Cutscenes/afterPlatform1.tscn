@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bi1vnlfb354p4"]
+
+[ext_resource type="Script" uid="uid://c035xmyxtyt7h" path="res://Scripts/stillImage_dialogue.gd" id="1_2bms7"]
+[ext_resource type="Resource" uid="uid://b71bsel8yspyx" path="res://Dialogue/afterPlatform1.dialogue" id="2_oufuk"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_2bms7")
+dialogue = ExtResource("2_oufuk")
+next_scene = "res://Scenes/Cutscenes/afterPlatform2.tscn"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(25.639997, 19.88)
