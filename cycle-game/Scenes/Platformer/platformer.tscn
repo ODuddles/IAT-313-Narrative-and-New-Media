@@ -324,7 +324,7 @@ scale = Vector2(1.6933681, 2.9288185)
 platform_nr = 2
 
 [node name="Crane" parent="." instance=ExtResource("10_br5b0")]
-position = Vector2(16429, -117)
+position = Vector2(15973, -117)
 
 [node name="TopHoseSupport" parent="." instance=ExtResource("6_ci7q4")]
 position = Vector2(7857.0005, -803)
