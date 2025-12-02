@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://buxtfqgquxf7g"]
+
+[ext_resource type="Script" uid="uid://ccs54ln2jsy7i" path="res://Scenes/Cutscenes/transporting.gd" id="1_wccl2"]
+[ext_resource type="Resource" uid="uid://d3xxa27k1ofvm" path="res://Dialogue/truck_convo.dialogue" id="2_aslq1"]
+
+[node name="BlackScreen" type="Node2D"]
+scale = Vector2(26.650553, 19.971462)
+script = ExtResource("1_wccl2")
+dialogue = ExtResource("2_aslq1")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 1)

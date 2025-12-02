@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bgetawkdjh4gx"
+path="res://.godot/imported/decision_convo.dialogue-50050fdf9372d6845524e8089a2abe75.tres"
+
+[deps]
+
+source_file="res://Dialogue/decision_convo.dialogue"
+dest_files=["res://.godot/imported/decision_convo.dialogue-50050fdf9372d6845524e8089a2abe75.tres"]
+
+[params]
+
+defaults=true

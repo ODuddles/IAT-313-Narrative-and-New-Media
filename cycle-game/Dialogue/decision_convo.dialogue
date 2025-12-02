@@ -1,0 +1,10 @@
+~ start
+Boxy: I'm gonna jump into that bin. 
+Squishy: Okay, alright, I won't stop you.
+- Stay
+	Boxy: So can you come with me? Please? I don't wanna be alone. 
+	Squishy: Sure. I'll go with you.
+	=> END
+- Leave
+ 	Squishy: Wait! I will come with you. I want you to be safe.
+=> END

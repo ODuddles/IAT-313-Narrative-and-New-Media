@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://373wot2a6t2c"]
+
+[ext_resource type="Script" uid="uid://pubjqmha3c2f" path="res://Scenes/Cutscenes/timer_next_scene.gd" id="1_2vne4"]
+[ext_resource type="Texture2D" uid="uid://c743ta4vo6nbx" path="res://Assets/Cutscenes/eliToldOff.png" id="1_8kfrh"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_2vne4")
+time = 4.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.81, 0.81)
+texture = ExtResource("1_8kfrh")

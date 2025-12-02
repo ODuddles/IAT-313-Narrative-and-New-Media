@@ -1,27 +1,66 @@
-[gd_scene load_steps=6 format=3 uid="uid://c4rlvnq745iof"]
+[gd_scene load_steps=10 format=3 uid="uid://c4rlvnq745iof"]
 
-[ext_resource type="Texture2D" uid="uid://cxqq0payagabk" path="res://Assets/water.png" id="1_1n3ur"]
 [ext_resource type="Script" uid="uid://wht3ydgslpdr" path="res://Scripts/waterMovement.gd" id="1_6hau2"]
-[ext_resource type="Shader" uid="uid://3hic3rlqvrv0" path="res://shaders/waterHose.gdshader" id="1_h43i6"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_6hau2"]
-shader = ExtResource("1_h43i6")
-shader_parameter/speed = 1.0
+[ext_resource type="Texture2D" uid="uid://cmvcu20i3nw84" path="res://Assets/Platformer/water_projectile.png" id="2_glj4p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6hau2"]
-size = Vector2(33.25312, 5.249132)
+size = Vector2(286.43945, 205.84027)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_glj4p"]
+atlas = ExtResource("2_glj4p")
+region = Rect2(0, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lrypp"]
+atlas = ExtResource("2_glj4p")
+region = Rect2(500, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vxip6"]
+atlas = ExtResource("2_glj4p")
+region = Rect2(1000, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3kejl"]
+atlas = ExtResource("2_glj4p")
+region = Rect2(1500, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7hkt1"]
+atlas = ExtResource("2_glj4p")
+region = Rect2(2000, 0, 500, 500)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3iem0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_glj4p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lrypp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vxip6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3kejl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7hkt1")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
 
 [node name="WaterProjectile" type="CharacterBody2D"]
 texture_filter = 1
 scale = Vector2(4, 4)
 script = ExtResource("1_6hau2")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_6hau2")
-texture = ExtResource("1_1n3ur")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.12236462, 0.8685078)
+position = Vector2(-6.3376827, 11.99001)
 rotation = -0.020579984
 scale = Vector2(0.9999996, 0.9999996)
 shape = SubResource("RectangleShape2D_6hau2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_3iem0")
+animation = &"idle"
+frame_progress = 0.46184802

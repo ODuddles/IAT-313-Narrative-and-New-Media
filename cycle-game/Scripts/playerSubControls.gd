@@ -6,6 +6,9 @@ var input_enabled = true
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
+func _ready():
+	$AnimatedSprite2D.play("idle")
+
 func move_to(target_position: Vector2, duration: float):
 	input_enabled = false
 	var tween := create_tween()

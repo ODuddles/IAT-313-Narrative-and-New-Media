@@ -1,8 +1,59 @@
-[gd_scene load_steps=4 format=3 uid="uid://d0hdfsm0ucdjq"]
+[gd_scene load_steps=12 format=3 uid="uid://d0hdfsm0ucdjq"]
 
 [ext_resource type="Script" uid="uid://cifvb3yn8jia7" path="res://Scripts/clicker.gd" id="1_sv1sk"]
 [ext_resource type="Texture2D" uid="uid://sf70ecgnpak2" path="res://Assets/dishwashing_frames/dishwashing_bg.tres" id="2_37wy7"]
 [ext_resource type="PackedScene" uid="uid://bqarpah51uufd" path="res://Scenes/Clicker/grandma_arm.tscn" id="3_vvjlw"]
+[ext_resource type="Texture2D" uid="uid://bq4kii0gq1lj3" path="res://Assets/Clicker/lid_flies_off_spritesheet.png" id="4_37wy7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vvjlw"]
+atlas = ExtResource("4_37wy7")
+region = Rect2(0, 0, 1024, 768)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pqqr0"]
+atlas = ExtResource("4_37wy7")
+region = Rect2(1024, 0, 1024, 768)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uhqwl"]
+atlas = ExtResource("4_37wy7")
+region = Rect2(2048, 0, 1024, 768)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_endte"]
+atlas = ExtResource("4_37wy7")
+region = Rect2(3072, 0, 1024, 768)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_644rr"]
+atlas = ExtResource("4_37wy7")
+region = Rect2(4096, 0, 1024, 768)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_edfuq"]
+atlas = ExtResource("4_37wy7")
+region = Rect2(5120, 0, 1024, 768)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mg58p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vvjlw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pqqr0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uhqwl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_endte")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_644rr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_edfuq")
+}],
+"loop": false,
+"name": &"lidFliesOff",
+"speed": 2.0
+}]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_sv1sk")
@@ -19,3 +70,9 @@ texture = ExtResource("2_37wy7")
 
 [node name="GrandmaArm" parent="." instance=ExtResource("3_vvjlw")]
 position = Vector2(566, 599)
+
+[node name="LidFliesOff" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(512, 384)
+sprite_frames = SubResource("SpriteFrames_mg58p")
+animation = &"lidFliesOff"

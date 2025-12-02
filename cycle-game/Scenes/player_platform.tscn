@@ -1,7 +1,7 @@
 [gd_scene load_steps=21 format=3 uid="uid://d3nowd16t3lpp"]
 
 [ext_resource type="Script" uid="uid://bvgennkvdl65p" path="res://Scripts/playerController.gd" id="1_cvnsp"]
-[ext_resource type="Texture2D" uid="uid://crudkmnlq8gkq" path="res://Assets/boxy_walk_spritesheet.png" id="2_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://crudkmnlq8gkq" path="res://Assets/Platformer/boxy_walk_spritesheet.png" id="2_cvnsp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vgqql"]
 size = Vector2(14.601478, 12.565467)

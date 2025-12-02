@@ -1,25 +1,94 @@
-[gd_scene load_steps=5 format=3 uid="uid://bsv2eeq28q4on"]
+[gd_scene load_steps=8 format=3 uid="uid://bsv2eeq28q4on"]
 
 [ext_resource type="Script" uid="uid://8kohs1hente4" path="res://Scripts/waterShoot.gd" id="1_hgiu0"]
-[ext_resource type="Texture2D" uid="uid://b3xf0vsg71eqf" path="res://Assets/hose.png" id="1_ksrva"]
-[ext_resource type="PackedScene" uid="uid://du805mburohm7" path="res://water_projectile.tscn" id="2_hgiu0"]
+[ext_resource type="PackedScene" uid="uid://doln16gs6qbs" path="res://Scenes/Platformer/waterBullet.tscn" id="2_a30yl"]
+[ext_resource type="Texture2D" uid="uid://bf3lbtussoer1" path="res://Assets/Platformer/tilesheet-1.png" id="3_a30yl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aueqs"]
-size = Vector2(86.57383, 27.848114)
+size = Vector2(78.298904, 27.848114)
+
+[sub_resource type="Animation" id="Animation_tysik"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2, -2.486)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_a30yl"]
+resource_name = "shoot"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-1.609, 2), Vector2(-2.012, 2.5), Vector2(-1.609, 2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [3.141592653589793, 3.141592653589793]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wkw03"]
+_data = {
+&"RESET": SubResource("Animation_tysik"),
+&"shoot": SubResource("Animation_a30yl")
+}
 
 [node name="hose" type="StaticBody2D"]
-scale = Vector2(-2.52, 3.1323538)
+scale = Vector2(2, -2.486)
 script = ExtResource("1_hgiu0")
-wave_scene = ExtResource("2_hgiu0")
+wave_scene = ExtResource("2_a30yl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-25.000002, -5.4272327)
+position = Vector2(-20.90362, -5.4272327)
 scale = Vector2(0.9900718, 1.0341398)
 shape = SubResource("RectangleShape2D_aueqs")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-scale = Vector2(1.3303456, 1.2701044)
-texture = ExtResource("1_ksrva")
+position = Vector2(-21.031746, -4.1502337)
+scale = Vector2(0.1, 0.096)
+texture = ExtResource("3_a30yl")
+region_enabled = true
+region_rect = Rect2(588, 560, 724, 224)
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_wkw03")
+}

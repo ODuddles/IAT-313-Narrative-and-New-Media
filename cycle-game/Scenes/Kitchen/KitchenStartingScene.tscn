@@ -1,0 +1,126 @@
+[gd_scene load_steps=18 format=3 uid="uid://cp5hylxhbwlho"]
+
+[ext_resource type="Texture2D" uid="uid://eg8nn3r7xlhv" path="res://Assets/Kitchen/kitchen_topDown.png" id="1_xfuoj"]
+[ext_resource type="PackedScene" uid="uid://cbqomroa2ykkt" path="res://Scenes/Kitchen/kitchenPlayer.tscn" id="2_ypweb"]
+[ext_resource type="Texture2D" uid="uid://djc6baxqlo7wf" path="res://Assets/Kitchen/grandma_static.png" id="3_3dusc"]
+[ext_resource type="PackedScene" uid="uid://ivk21byxokey" path="res://Dialogue/actionable.tscn" id="3_gqup5"]
+[ext_resource type="Texture2D" uid="uid://b3yfy1657ty04" path="res://Assets/Kitchen/squishy_idle_spritesheet .png" id="4_tnu8d"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gqup5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ypweb"]
+size = Vector2(1030, 115)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ln4ll"]
+size = Vector2(20, 876)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ynwsm"]
+size = Vector2(95, 880)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xleg3"]
+size = Vector2(92, 61)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gqup5"]
+size = Vector2(105, 61)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2snct"]
+size = Vector2(849, 285)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tnu8d"]
+size = Vector2(180, 600)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3dusc"]
+size = Vector2(614, 168)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_73ihe"]
+size = Vector2(248.5715, 475.71442)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_01fn2"]
+size = Vector2(303.33328, 236.66663)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xleg3"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="KitchenTopDown" type="Sprite2D" parent="."]
+position = Vector2(512, 384)
+texture = ExtResource("1_xfuoj")
+
+[node name="Player" parent="." instance=ExtResource("2_ypweb")]
+position = Vector2(247, 540)
+scale = Vector2(0.2, 0.2)
+
+[node name="Actionable" parent="Player" instance=ExtResource("3_gqup5")]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Actionable"]
+position = Vector2(-10.000004, 125)
+scale = Vector2(25, 25)
+shape = SubResource("CircleShape2D_gqup5")
+
+[node name="CollisionBoxes" type="StaticBody2D" parent="."]
+
+[node name="BottomCollision" type="CollisionShape2D" parent="CollisionBoxes"]
+position = Vector2(514, 823.5)
+shape = SubResource("RectangleShape2D_ypweb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionBoxes"]
+position = Vector2(1036, 433)
+shape = SubResource("RectangleShape2D_ln4ll")
+
+[node name="leftCollision" type="CollisionShape2D" parent="CollisionBoxes"]
+position = Vector2(-50, 435)
+shape = SubResource("RectangleShape2D_ynwsm")
+
+[node name="chairCollision2" type="CollisionShape2D" parent="CollisionBoxes"]
+position = Vector2(749, 573)
+shape = SubResource("RectangleShape2D_xleg3")
+
+[node name="chairCollision1" type="CollisionShape2D" parent="CollisionBoxes"]
+position = Vector2(540, 575)
+shape = SubResource("RectangleShape2D_gqup5")
+
+[node name="counterCollision2" type="CollisionShape2D" parent="CollisionBoxes"]
+position = Vector2(595.5, 141.5)
+shape = SubResource("RectangleShape2D_2snct")
+
+[node name="counterCollision1" type="CollisionShape2D" parent="CollisionBoxes"]
+position = Vector2(80, 301)
+shape = SubResource("RectangleShape2D_tnu8d")
+
+[node name="tableCollision" type="CollisionShape2D" parent="CollisionBoxes"]
+position = Vector2(679, 680)
+shape = SubResource("RectangleShape2D_3dusc")
+
+[node name="GrandMa" type="StaticBody2D" parent="."]
+position = Vector2(251, 265)
+scale = Vector2(0.7, 0.7)
+
+[node name="Sprite2D" type="Sprite2D" parent="GrandMa"]
+texture = ExtResource("3_3dusc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrandMa"]
+position = Vector2(8.571411, 0.71429443)
+scale = Vector2(0.9999995, 0.9999995)
+shape = SubResource("RectangleShape2D_73ihe")
+
+[node name="Squishy" type="Area2D" parent="."]
+position = Vector2(799, 346)
+scale = Vector2(0.3, 0.3)
+
+[node name="Sprite2D" type="Sprite2D" parent="Squishy"]
+texture = ExtResource("4_tnu8d")
+region_enabled = true
+region_rect = Rect2(106, 256, 293, 243)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Squishy"]
+position = Vector2(1.666748, -4.999878)
+shape = SubResource("RectangleShape2D_01fn2")
+
+[node name="Actionable" parent="Squishy" instance=ExtResource("3_gqup5")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Squishy/Actionable"]
+position = Vector2(-6.666664, 3.3333333)
+scale = Vector2(20, 20)
+shape = SubResource("CircleShape2D_xleg3")

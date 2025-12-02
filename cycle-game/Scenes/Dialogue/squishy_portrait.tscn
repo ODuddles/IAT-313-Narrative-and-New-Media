@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwdl8p3kpcy2m"]
+
+[ext_resource type="Texture2D" uid="uid://b3yfy1657ty04" path="res://Assets/Kitchen/squishy_idle_spritesheet .png" id="1_ma6gr"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_ma6gr")
+region_enabled = true
+region_rect = Rect2(106, 256, 293, 243)

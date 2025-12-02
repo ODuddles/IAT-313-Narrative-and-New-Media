@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var timer: Timer = $Timer
-
+@onready var tree = get_tree()
 @export var size: Vector2 = Vector2(40, 200)   # Rectangle size
 @export var border_color: Color = Color.BLACK
 @export var fill_color: Color = Color.RED
@@ -17,7 +17,12 @@ func _input(event):
 			timer.stop()
 			fill_amount = 1.0
 			queue_redraw()
-			print("WINNNN")
+			$TextureRect.visible = false
+			$LidFliesOff.frame = 0
+			$LidFliesOff.play("lidFliesOff")
+			$LidFliesOff.visible = true
+			await $LidFliesOff.animation_finished
+			tree.change_scene_to_file("res://Scenes/Platformer/platformer.tscn")  
 		else: 
 			if fill_amount > 0:
 				fill_amount = fill_amount + fill_step
@@ -46,3 +51,6 @@ func _on_timeout() -> void:
 	arm.set_playback_speed(fill_amount * 10 + 1)
 	queue_redraw()
 	timer.wait_time = max(difficulty * (1 - fill_amount), 0.04)
+
+func _on_AnimatedSprite2D_animation_finished():
+	get_tree().change_scene_to_file("res://Scenes/Cutscenes/doorSnidge.tscn")

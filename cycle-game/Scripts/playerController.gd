@@ -8,6 +8,9 @@ var knockback_timer = 0
 var knockback_velocity = Vector2.ZERO
 
 func _physics_process(delta: float) -> void:
+	if self.position.y > 1600:
+		self.position = Vector2(55, 480)
+	
 	if knockback_timer > 0:
 		velocity = knockback_velocity
 		knockback_timer -= delta

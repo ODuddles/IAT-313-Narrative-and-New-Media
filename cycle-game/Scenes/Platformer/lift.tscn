@@ -1,0 +1,74 @@
+[gd_scene load_steps=8 format=3 uid="uid://dhktox1yofji3"]
+
+[ext_resource type="Script" uid="uid://baxv36g5tjg0q" path="res://Scripts/lift.gd" id="1_8e1k3"]
+[ext_resource type="Texture2D" uid="uid://bf3lbtussoer1" path="res://Assets/Platformer/tilesheet-1.png" id="2_8e1k3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_amq2t"]
+size = Vector2(16.632217, 77.75479)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8e1k3"]
+size = Vector2(356, 86)
+
+[sub_resource type="Animation" id="Animation_kry3j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jjvhh"]
+resource_name = "move"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 1023)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_21xkr"]
+_data = {
+&"RESET": SubResource("Animation_kry3j"),
+&"move": SubResource("Animation_jjvhh")
+}
+
+[node name="lift" type="CharacterBody2D"]
+script = ExtResource("1_8e1k3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(21.445059, 1.1446967)
+shape = SubResource("RectangleShape2D_amq2t")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
+rotation = 1.5707964
+scale = Vector2(0.55, 0.058)
+texture = ExtResource("2_8e1k3")
+region_enabled = true
+region_rect = Rect2(72.51312, 0.051635742, 140.30768, 284.5128)
+
+[node name="LandingArea" type="Area2D" parent="CollisionShape2D"]
+position = Vector2(-0.23315382, -47.174072)
+scale = Vector2(0.04663079, 0.87359387)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionShape2D/LandingArea"]
+position = Vector2(2, -33)
+shape = SubResource("RectangleShape2D_8e1k3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_21xkr")
+}

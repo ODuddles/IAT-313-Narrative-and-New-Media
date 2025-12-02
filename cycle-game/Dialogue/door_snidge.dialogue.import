@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bk68rvydyhyx7"
+path="res://.godot/imported/door_snidge.dialogue-c4a38e1faccdb56f444efbceeaf83ed6.tres"
+
+[deps]
+
+source_file="res://Dialogue/door_snidge.dialogue"
+dest_files=["res://.godot/imported/door_snidge.dialogue-c4a38e1faccdb56f444efbceeaf83ed6.tres"]
+
+[params]
+
+defaults=true

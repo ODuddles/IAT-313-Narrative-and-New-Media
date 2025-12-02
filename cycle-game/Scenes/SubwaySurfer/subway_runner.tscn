@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bd6e3svynhbrx" path="res://Scenes/SubwaySurfer/PlayerSubway.tscn" id="1_3j4fo"]
 [ext_resource type="Script" uid="uid://cu1ofw4seopy7" path="res://Scripts/subway_scene.gd" id="1_e7mgi"]
-[ext_resource type="Texture2D" uid="uid://cma4andpfa3dc" path="res://Assets/chute_bg.png" id="2_dqdao"]
+[ext_resource type="Texture2D" uid="uid://cma4andpfa3dc" path="res://Assets/SubwaySurfer/chute_bg.png" id="2_dqdao"]
 [ext_resource type="PackedScene" uid="uid://buyr1ik0nc5a2" path="res://Scenes/SubwaySurfer/box.tscn" id="2_hfw51"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3j4fo"]
@@ -16,7 +16,7 @@ freq_time = 1.0
 
 [node name="Player" parent="." instance=ExtResource("1_3j4fo")]
 position = Vector2(510, 670)
-scale = Vector2(5, 5)
+scale = Vector2(3, 3)
 
 [node name="leftWall" type="StaticBody2D" parent="."]
 position = Vector2(31, 260)

@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bqarpah51uufd"]
 
-[ext_resource type="Script" uid="uid://ida2vcrd5xea" path="res://scrubbing.gd" id="1_hlltr"]
-[ext_resource type="Texture2D" uid="uid://cwqdnkd2v348r" path="res://Assets/grandma_arm_dish.png" id="1_yxso8"]
+[ext_resource type="Script" uid="uid://ida2vcrd5xea" path="res://Scripts/scrubbing.gd" id="1_hlltr"]
+[ext_resource type="Texture2D" uid="uid://cwqdnkd2v348r" path="res://Assets/Clicker/grandma_arm_dish.png" id="1_yxso8"]
 
 [sub_resource type="Animation" id="Animation_yxso8"]
 length = 0.001

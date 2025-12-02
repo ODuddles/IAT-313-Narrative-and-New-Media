@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bfxv6y774rsbr"
+path="res://.godot/imported/nightstand.dialogue-c530aba358094a141962fbe8a2446870.tres"
+
+[deps]
+
+source_file="res://Dialogue/nightstand.dialogue"
+dest_files=["res://.godot/imported/nightstand.dialogue-c530aba358094a141962fbe8a2446870.tres"]
+
+[params]
+
+defaults=true

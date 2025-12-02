@@ -4,6 +4,7 @@ var speed : float = 300
 var direction : Vector2 = Vector2.RIGHT  # default
 
 func _ready():
+	$AnimatedSprite2D.play("idle")
 	connect("body_entered", Callable(self, "_on_body_entered"))
 
 func _physics_process(delta: float) -> void:

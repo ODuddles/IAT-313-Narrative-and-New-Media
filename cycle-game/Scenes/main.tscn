@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://bk2x3yqx2pe1r"]
+
+[ext_resource type="Texture2D" uid="uid://bimhkdthddmie" path="res://Assets/title screen.png" id="2_8gbba"]
+[ext_resource type="Script" uid="uid://tkkri7yegxdv" path="res://Scripts/StartButton.gd" id="3_21xkr"]
+[ext_resource type="Texture2D" uid="uid://b0p4rfwpt6g3s" path="res://Assets/UI/start button.png" id="4_21xkr"]
+[ext_resource type="Texture2D" uid="uid://bnjiw3iofwmi7" path="res://Assets/UI/start hover.png" id="5_6bp64"]
+[ext_resource type="Script" uid="uid://cejlpblir6re6" path="res://Scripts/button.gd" id="5_21xkr"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(515, 383.00003)
+scale = Vector2(0.52, 0.52)
+texture = ExtResource("2_8gbba")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_21xkr")
+
+[node name="Start" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 426.0
+offset_top = 497.0
+offset_right = 603.0
+offset_bottom = 551.0
+icon = ExtResource("4_21xkr")
+flat = true
+script = ExtResource("5_21xkr")
+normal_icon = ExtResource("4_21xkr")
+hover_icon = ExtResource("5_6bp64")

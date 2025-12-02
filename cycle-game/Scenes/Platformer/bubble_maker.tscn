@@ -1,10 +1,59 @@
-[gd_scene load_steps=4 format=3 uid="uid://bgvx0ohqlghcg"]
+[gd_scene load_steps=11 format=3 uid="uid://bgvx0ohqlghcg"]
 
 [ext_resource type="Script" uid="uid://bk68mobp8eto0" path="res://Scripts/bubble_maker.gd" id="1_erys0"]
 [ext_resource type="PackedScene" uid="uid://dp4pygy6usitx" path="res://Scenes/Platformer/bubble.tscn" id="2_ssdnd"]
+[ext_resource type="Texture2D" uid="uid://baph2u21b27xi" path="res://Assets/Platformer/bubble_maker.png" id="3_cer6e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aueqs"]
-size = Vector2(86.57383, 27.848114)
+size = Vector2(69.33922, 36.151142)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cer6e"]
+atlas = ExtResource("3_cer6e")
+region = Rect2(840, 0, 280, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_074pb"]
+atlas = ExtResource("3_cer6e")
+region = Rect2(0, 0, 280, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2t0sc"]
+atlas = ExtResource("3_cer6e")
+region = Rect2(280, 0, 280, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oxehh"]
+atlas = ExtResource("3_cer6e")
+region = Rect2(560, 0, 280, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4b835"]
+atlas = ExtResource("3_cer6e")
+region = Rect2(840, 0, 280, 140)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lxisp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cer6e")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_074pb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2t0sc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oxehh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4b835")
+}],
+"loop": false,
+"name": &"make",
+"speed": 5.0
+}]
 
 [node name="bubble_maker" type="StaticBody2D"]
 scale = Vector2(-2.52, 3.1323538)
@@ -12,7 +61,6 @@ script = ExtResource("1_erys0")
 bubble_scene = ExtResource("2_ssdnd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-25.000002, -5.4272327)
 scale = Vector2(0.9900718, 1.0341398)
 shape = SubResource("RectangleShape2D_aueqs")
 
@@ -20,10 +68,6 @@ shape = SubResource("RectangleShape2D_aueqs")
 wait_time = 6.178
 autostart = true
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_left = 17.857143
-offset_top = -20.43192
-offset_right = 57.857143
-offset_bottom = 19.56808
-scale = Vector2(-2.17297, 0.71378064)
-color = Color(0, 1, 1, 1)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_lxisp")

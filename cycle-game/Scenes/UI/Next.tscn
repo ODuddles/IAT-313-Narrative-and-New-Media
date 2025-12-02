@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://n2etmyor8m08"]
+
+[ext_resource type="Texture2D" uid="uid://dtkgd1qd5g0y7" path="res://Assets/UI/arrow.png" id="1_poo1n"]
+[ext_resource type="Script" uid="uid://c1kca0g10odkl" path="res://Scenes/UI/next_scene_btn.gd" id="2_663q4"]
+
+[node name="NextButton" type="Node2D"]
+script = ExtResource("2_663q4")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Next" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 837.0
+offset_top = 658.0
+offset_right = 924.0
+offset_bottom = 707.0
+scale = Vector2(2, 2)
+icon = ExtResource("1_poo1n")
+flat = true

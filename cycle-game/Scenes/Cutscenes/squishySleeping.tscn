@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://cfsb7wgytjg7p"]
+
+[ext_resource type="Script" uid="uid://c035xmyxtyt7h" path="res://Scripts/stillImage_dialogue.gd" id="1_n3dlr"]
+[ext_resource type="Texture2D" uid="uid://dw7m07x63kfnv" path="res://Assets/Cutscenes/nighstand.png" id="1_pb08x"]
+[ext_resource type="Resource" uid="uid://bfxv6y774rsbr" path="res://Dialogue/nightstand.dialogue" id="2_a7dn3"]
+[ext_resource type="Texture2D" uid="uid://b3yfy1657ty04" path="res://Assets/Kitchen/squishy_idle_spritesheet .png" id="2_ca36e"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_n3dlr")
+dialogue = ExtResource("2_a7dn3")
+next_scene = "res://Scenes/Cutscenes/discussion.tscn"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_pb08x")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(582, 320)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ca36e")
+region_enabled = true
+region_rect = Rect2(1606, 256, 293, 243)

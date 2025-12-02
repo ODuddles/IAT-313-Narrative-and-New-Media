@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dc8jxwg7ukovo"]
+
+[ext_resource type="Script" uid="uid://c035xmyxtyt7h" path="res://Scripts/stillImage_dialogue.gd" id="1_qahb8"]
+[ext_resource type="Resource" uid="uid://bgetawkdjh4gx" path="res://Dialogue/decision_convo.dialogue" id="2_jjvp5"]
+[ext_resource type="Texture2D" uid="uid://20472elbsqwj" path="res://Assets/Cutscenes/choice.png" id="3_06wir"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_qahb8")
+dialogue = ExtResource("2_jjvp5")
+next_scene = "res://Scenes/Platformer/platformer.tscn"
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_right = 2025.0
+offset_bottom = 1519.0
+scale = Vector2(0.51, 0.51)
+texture = ExtResource("3_06wir")

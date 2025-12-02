@@ -1,0 +1,116 @@
+[gd_scene load_steps=16 format=3 uid="uid://dgofjtssud3hb"]
+
+[ext_resource type="Script" uid="uid://dc8fmjwxoysp2" path="res://Scripts/ui_handler.gd" id="1_nxvpl"]
+[ext_resource type="Texture2D" uid="uid://byp4ed6wpi5d3" path="res://Assets/UI/menu.png" id="2_dewlx"]
+[ext_resource type="Script" uid="uid://cejlpblir6re6" path="res://Scripts/button.gd" id="3_dewlx"]
+[ext_resource type="Texture2D" uid="uid://bog5vyvhdx0wh" path="res://Assets/UI/menu hovered.png" id="4_hfhsn"]
+[ext_resource type="Texture2D" uid="uid://cj2biyqvlnj7m" path="res://Assets/UI/quit.png" id="5_48q88"]
+[ext_resource type="Texture2D" uid="uid://k2q1xbk05skk" path="res://Assets/UI/quit hovered.png" id="6_xjg7p"]
+[ext_resource type="Texture2D" uid="uid://cxcnq8i48ts8m" path="res://Assets/UI/home.png" id="7_j04uc"]
+[ext_resource type="Texture2D" uid="uid://s1jiy6ftvmiu" path="res://Assets/UI/home hovered.png" id="8_vqx31"]
+[ext_resource type="Texture2D" uid="uid://gk1huuuatuhs" path="res://Assets/UI/retry button (game over screen).png" id="9_b1goy"]
+[ext_resource type="Texture2D" uid="uid://dqjvgaeyl2083" path="res://Assets/UI/retry button hover (game over screen).png" id="10_n04ve"]
+[ext_resource type="Texture2D" uid="uid://dtkgd1qd5g0y7" path="res://Assets/UI/arrow.png" id="11_vqx31"]
+[ext_resource type="Texture2D" uid="uid://os31g4qcskt2" path="res://Assets/UI/mute.png" id="12_b1goy"]
+[ext_resource type="Texture2D" uid="uid://cn6tsrwy7vhrt" path="res://Assets/UI/mute hovered.png" id="13_n04ve"]
+[ext_resource type="Texture2D" uid="uid://dik3xd3jw6jor" path="res://Assets/UI/unmute.png" id="14_wi7yl"]
+[ext_resource type="Texture2D" uid="uid://dj22sykuxbt6y" path="res://Assets/UI/unmute hovered.png" id="15_5q4fb"]
+
+[node name="UI" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_nxvpl")
+
+[node name="Menu" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 799.0
+offset_top = 20.0
+offset_right = 1147.0
+offset_bottom = 138.0
+scale = Vector2(0.6, 0.6)
+icon = ExtResource("2_dewlx")
+flat = true
+script = ExtResource("3_dewlx")
+normal_icon = ExtResource("2_dewlx")
+hover_icon = ExtResource("4_hfhsn")
+
+[node name="Quit" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 381.00003
+offset_top = 428.0
+offset_right = 898.0
+offset_bottom = 546.0
+scale = Vector2(0.6, 0.6)
+icon = ExtResource("5_48q88")
+flat = true
+script = ExtResource("3_dewlx")
+normal_icon = ExtResource("5_48q88")
+hover_icon = ExtResource("6_xjg7p")
+
+[node name="Home" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 383.0
+offset_top = 166.0
+offset_right = 900.0
+offset_bottom = 284.0
+scale = Vector2(0.6, 0.6)
+icon = ExtResource("7_j04uc")
+flat = true
+script = ExtResource("3_dewlx")
+normal_icon = ExtResource("7_j04uc")
+hover_icon = ExtResource("8_vqx31")
+
+[node name="Retry" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 381.0
+offset_top = 291.0
+offset_right = 1064.0
+offset_bottom = 482.0
+scale = Vector2(0.45, 0.45)
+icon = ExtResource("9_b1goy")
+flat = true
+script = ExtResource("3_dewlx")
+normal_icon = ExtResource("9_b1goy")
+hover_icon = ExtResource("10_n04ve")
+
+[node name="Back" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 822.0
+offset_top = 4.0
+offset_right = 909.0
+offset_bottom = 53.0
+scale = Vector2(2, 2)
+icon = ExtResource("11_vqx31")
+flat = true
+
+[node name="Mute" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 712.0
+offset_top = 27.0
+offset_right = 859.0
+offset_bottom = 145.0
+scale = Vector2(0.5, 0.5)
+icon = ExtResource("12_b1goy")
+flat = true
+script = ExtResource("3_dewlx")
+normal_icon = ExtResource("12_b1goy")
+hover_icon = ExtResource("13_n04ve")
+
+[node name="Unmute" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 712.0
+offset_top = 27.0
+offset_right = 860.0
+offset_bottom = 145.0
+scale = Vector2(0.5, 0.5)
+icon = ExtResource("14_wi7yl")
+flat = true
+script = ExtResource("3_dewlx")
+normal_icon = ExtResource("14_wi7yl")
+hover_icon = ExtResource("15_5q4fb")

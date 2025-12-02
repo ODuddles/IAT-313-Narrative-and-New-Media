@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://y3iugsrrosq4"]
+
+[ext_resource type="Texture2D" uid="uid://q1my601th0r1" path="res://Assets/Dialogue/boxy_dialogue_sprite.png" id="1_1k8t4"]
+
+[node name="Node2D" type="Node2D"]
+scale = Vector2(1.2, 1.2)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_1k8t4")

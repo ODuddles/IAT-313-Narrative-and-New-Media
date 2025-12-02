@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://d3xxa27k1ofvm"
+path="res://.godot/imported/truck_convo.dialogue-35c14a3adfe6677d68a66da68cae6bc5.tres"
+
+[deps]
+
+source_file="res://Dialogue/truck_convo.dialogue"
+dest_files=["res://.godot/imported/truck_convo.dialogue-35c14a3adfe6677d68a66da68cae6bc5.tres"]
+
+[params]
+
+defaults=true

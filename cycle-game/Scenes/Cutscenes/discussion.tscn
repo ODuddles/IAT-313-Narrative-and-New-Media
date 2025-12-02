@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://b0cd5eucwn4rr"]
+
+[ext_resource type="Script" uid="uid://c035xmyxtyt7h" path="res://Scripts/stillImage_dialogue.gd" id="1_e8bbx"]
+[ext_resource type="Texture2D" uid="uid://bn7w03lon5j01" path="res://Assets/Cutscenes/hall.png" id="1_fjngr"]
+[ext_resource type="Resource" uid="uid://dojd5cpwouocm" path="res://Dialogue/discussion.dialogue" id="2_61mn8"]
+[ext_resource type="Texture2D" uid="uid://b6s7ynq42tn40" path="res://Assets/Kitchen/boxy_stumble.png" id="2_jaget"]
+[ext_resource type="Texture2D" uid="uid://b3yfy1657ty04" path="res://Assets/Kitchen/squishy_idle_spritesheet .png" id="3_7j5eb"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_e8bbx")
+dialogue = ExtResource("2_61mn8")
+next_scene = "res://Scenes/Cutscenes/DecisionLeave.tscn"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_fjngr")
+
+[node name="Boxy" type="Sprite2D" parent="."]
+position = Vector2(399.00003, 570)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_jaget")
+region_enabled = true
+region_rect = Rect2(1024, 294, 444, 206)
+
+[node name="Squishy" type="Sprite2D" parent="."]
+position = Vector2(558, 564)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_7j5eb")
+region_enabled = true
+region_rect = Rect2(1606, 256, 293, 243)

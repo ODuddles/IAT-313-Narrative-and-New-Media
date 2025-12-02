@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqw1fpgnpsqea"]
+
+[ext_resource type="Script" uid="uid://pubjqmha3c2f" path="res://Scenes/Cutscenes/timer_next_scene.gd" id="1_e1r6m"]
+[ext_resource type="Texture2D" uid="uid://ddq0q58p4lowx" path="res://Assets/Cutscenes/BoxyBeingFilled.jpg" id="1_pd5i0"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_e1r6m")
+time = 4.0
+next_scene = "res://Scenes/Cutscenes/eliToldOff.tscn"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.342, 0.43)
+texture = ExtResource("1_pd5i0")
